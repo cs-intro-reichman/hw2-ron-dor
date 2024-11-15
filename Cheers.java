@@ -11,14 +11,15 @@ public class Cheers {
             // For loop to print the vowel letters while examining a/an.
             for (int i = 0; i < inputString.length(); i++) {
                 char currentLetter = inputString.charAt(i);
-                String newLetter = Character.toString(currentLetter);
-                String checkLetter;
-                if (vowelLetters.contains(newLetter)) {
-                        checkLetter = "an";
-                } else {
-                        checkLetter = "a";
+                String checkLetter = "a"; // Case of non-vowel.
+                String dynamicSpacing = "  "; // Case of non-vowel.
+                // Check for case of a vowel letter.
+                if (vowelLetters.indexOf(currentLetter) >= 0) {
+                        checkLetter = "an"; // Case of vowel.
+                        dynamicSpacing = " "; // Case of vowel/
                 }
-                System.out.println("Give me " + checkLetter + "  " + newLetter + ": " + newLetter + "!");
+                // Print the letter with the dynamic spacing and a/an.
+                System.out.println("Give me " + checkLetter + dynamicSpacing + currentLetter + ": " + currentLetter + "!");
             }
 
             // For loop to print the cheering stuff.
