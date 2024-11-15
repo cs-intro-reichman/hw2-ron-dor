@@ -18,7 +18,7 @@ public class Cheers {
                 } else {
                         checkLetter = "a";
                 }
-                System.out.println("Give me " + checkLetter + " " + newLetter + ": " + newLetter + "!");
+                System.out.println("Give me " + checkLetter + "  " + newLetter + ": " + newLetter + "!");
             }
 
             // For loop to print the cheering stuff.
